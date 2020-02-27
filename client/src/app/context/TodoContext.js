@@ -1,12 +1,12 @@
 import React, { createContext, useEffect, useState } from 'react';
-import uuid from 'uuid/v1';
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoContext = createContext();
 
 const mockData = [
-    { id: uuid(), title: 'Mijn kindjes wassen', completed: true, createdAt: Date.now() },
-    { id: uuid(), title: 'Vegan food halen uit den Albert', completed: true, createdAt: Date.now() },
-    { id: uuid(), title: 'Nieuw Macbook Pro 18inch afhalen at coolblue', completed: false, createdAt: Date.now() }
+    { id: uuidv4(), title: 'Mijn kindjes wassen', completed: true, createdAt: Date.now() },
+    { id: uuidv4(), title: 'Vegan food halen uit den Albert', completed: true, createdAt: Date.now() },
+    { id: uuidv4(), title: 'Nieuw Macbook Pro 18inch afhalen at coolblue', completed: false, createdAt: Date.now() }
 ];
 
 const TodoContextProvider = ({children}) => {
@@ -20,7 +20,7 @@ const TodoContextProvider = ({children}) => {
         setTodos([
             ...todos,
             {
-                id: uuid(),
+                id: uuidv4(),
                 title,
                 completed: false,
                 createdAt: Date.now()
