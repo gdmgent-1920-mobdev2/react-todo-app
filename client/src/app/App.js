@@ -6,11 +6,13 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main class="main">
-        <TodoForm />
-      </main>
+    <div className="app">
+      <div className="app__container">
+        <Header />
+        <main class="app__main">
+          <TodoForm />
+        </main>
+      </div>
     </div>
   );
 }
