@@ -10,7 +10,7 @@ const mockData = [
 ];
 
 const TodoContextProvider = ({children}) => {
-    const [ todos, setTodos ] = useState((localStorage.getItem('todoapp.todo')) ? JSON.parse(localStorage.getItem('todoapp.todo')) : []);
+    const [ todos, setTodos ] = useState(JSON.parse(localStorage.getItem('todoapp.todo')) || []);
 
     useEffect(() => {
         localStorage.setItem('todoapp.todo', JSON.stringify(todos));
