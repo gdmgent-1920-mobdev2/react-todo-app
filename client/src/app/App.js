@@ -1,19 +1,22 @@
 import React from 'react';
 
-import { Header, TodoForm } from './components';
+import { Header, TodoForm, TodoList } from './components';
+import { TodoContextProvider } from './context';
 
 import './App.css';
-import TodoListItem from './components/TodoListItem';
+
 
 function App() {
   return (
     <div className="app">
       <div className="app__container">
-        <Header />
-        <main className="app__main">
-          <TodoForm />
-          <TodoListItem />
-        </main>
+        <TodoContextProvider>
+          <Header />
+          <main className="app__main">
+            <TodoForm />
+            <TodoList />
+          </main>
+        </TodoContextProvider>
       </div>
     </div>
   );
