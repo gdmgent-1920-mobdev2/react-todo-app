@@ -3,7 +3,9 @@ import React from 'react';
 const TodoListItem = ({todo}) => {
     return (
         <li className="todo-list__item">
-            {todo}
+            <h1>{todo.title}</h1>
+            <span className="btn-complete">C</span>
+            <span className="btn-remove">R</span>
         </li>
     );
 };
