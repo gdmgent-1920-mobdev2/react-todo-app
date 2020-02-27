@@ -23,7 +23,7 @@
     font-size: 2rem;
   }
   
-  .todo-list__item--complete > h1 {
+  .todo-list__item--completed > h1 {
     text-decoration: line-through 4px solid;
   }
   
@@ -41,7 +41,7 @@
     line-height: 32px;
   }
   
-  .todo-list__item--complete > .btn-complete {
+  .todo-list__item--completed > .btn-complete {
     background: var(--color-green);
   }
   
