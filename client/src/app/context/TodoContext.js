@@ -24,8 +24,12 @@ const TodoContextProvider = ({children}) => {
         ]);
     };
 
+    const removeTodo = (id) => {
+        setTodos(todos.filter(todo => todo.id !== id));
+    };
+
     return (
-        <TodoContext.Provider value={{todos, addTodo}}>
+        <TodoContext.Provider value={{todos, addTodo, removeTodo}}>
             {children}
         </TodoContext.Provider>
     )

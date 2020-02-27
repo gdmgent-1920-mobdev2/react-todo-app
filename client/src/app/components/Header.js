@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { TodoContext } from '../context';
 
+import './Header.css';
+
 const Header = ({}) => {
     const { todos } = useContext(TodoContext);
 

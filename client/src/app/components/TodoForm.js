@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { TodoContext } from '../context';
 
+import './TodoForm.css';
+
 const TodoForm = ({}) => {
     const [ title, setTitle ] = useState('');
     const { addTodo } = useContext(TodoContext);
